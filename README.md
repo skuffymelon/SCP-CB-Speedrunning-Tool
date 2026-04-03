@@ -3,6 +3,7 @@
 ### A program for SCP Containment Breach speedrunners and casual players aswell!
 
 Features:
+  - **Bridge between the game and the tool (allows for tracking of achievements and cheats)** *(only speedrun mod is supported right now.)*
   - Maynard <-> Maintenence code conversion.
   - Map layout generator with labels.
   - Seed generator for ranked speedrunning.
@@ -24,7 +25,24 @@ The link to Sooslick's software is listed down below.
 
 - https://github.com/Sooslick/scpcbUtility/tree/master
 
+## SOURCE CODE SETUP AND BUILD
+  - **This program was made in the .NET 8.0 framework.**
+    
+  - Download the source code.
+  - Open the solution file.
+  - Build to make/revert assembly references (nuget cache)
+  - You're all set!
+
 # CHANGELOG
+### 4/3/2026
+## (0.3a)
+- Added bridge between the tool and SCP Containment Breach (Speedrun Mod)
+- Achievement Tracking Overlay
+- Maynard <-> Maintenence Code Converter Overlay
+- Cheats accessible through new SCP - CB Menu
+- Cheats also accessible with hotkeys (Check help menu in the tool for help on hotkeys)
+- Fixed a few oversights and bugs from the last version.
+- Added "Enable Cheats" option in the Settings.
 ### 3/9/2026
 ## (0.2a)
 - Fixed program crashing upon closure.
