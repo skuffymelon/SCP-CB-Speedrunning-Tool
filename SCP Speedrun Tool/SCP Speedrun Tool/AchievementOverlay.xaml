@@ -1,0 +1,233 @@
+﻿<Window x:Class="SCP_Speedrun_Tool.AchievementOverlay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCP_Speedrun_Tool"
+        mc:Ignorable="d"
+        Title="Achievement Overlay" Height="239" Width="252" WindowStyle="None" AllowsTransparency="True" Background="Transparent" IsHitTestVisible="True" Topmost="True" FontFamily="Courier New" ResizeMode="NoResize">
+    <Grid>
+        <Label PreviewMouseLeftButtonDown="MoveWindow"/>
+        <Grid x:Name="achievementbar" VerticalAlignment="Top" Height="21" IsHitTestVisible="False">
+            <Border Loaded="AddToCheatIndex" BorderThickness="1" Background="Black" Opacity="0.5" CornerRadius="5" BorderBrush="White"/>
+            <TextBlock Foreground="White" x:Name="achcount" Text="ACHIEVEMENTS: 0/37" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
+            <!--<TextBlock x:Name="achtaken" Text="008 - 012 - 035 - 055 - 079 - 106 - 148 - " TextAlignment="Center" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,19,0,0" RenderTransformOrigin="0.5,0.5" Width="242"/>-->
+        </Grid>
+
+        <Grid x:Name="runstatsgrid" Visibility="Hidden" VerticalAlignment="Bottom" Height="216" IsHitTestVisible="False">
+            <Border Loaded="AddToCheatIndex" BorderThickness="1" Background="#44000000" CornerRadius="5" BorderBrush="White"/>
+
+            <StackPanel x:Name="runstats" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Margin="0,0,0,5" Foreground="White" Height="46" FontSize="20" TextAlignment="Center" Width="252" Text="RUN FINSHED IN:&#10;xx:xx.xxx" HorizontalAlignment="Center"/>
+                <TextBlock Margin="5,0,5,5" Foreground="White" FontSize="16" TextAlignment="Center" Width="252" Text="ACHIEVEMENTS:&#10;xx/37" HorizontalAlignment="Center" Height="36"/>
+                <TextBlock Margin="5,0,5,5" Foreground="LightGreen" FontSize="14" TextAlignment="Center" Width="252" Text="DIFFICULTY:&#10;SAFE/EUCLID/KETER" HorizontalAlignment="Center" Height="32"/>
+                <TextBlock Margin="5,0,5,0" Foreground="Red" FontSize="12" TextAlignment="Center" Width="252" Text="THIS RUN USES CHEATS." HorizontalAlignment="Center" Height="14"/>
+            </StackPanel>
+        </Grid>
+        
+        <Grid Visibility="Visible" x:Name="achvindex" Width="252" Height="216" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Border Grid.Row="0" Grid.Column="0" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv008.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="1" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv012.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv035.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="3" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv049.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="4" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv055.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="5" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv079.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="0" Grid.Column="6" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv096.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="0" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv106.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv148.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="2" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv205.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="3" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv294.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="4" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv372.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="5" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv420.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="6" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv427.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="0" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv500.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="1" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv513.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="2" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv714.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="3" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv789.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="4" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv860.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="5" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv895.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="2" Grid.Column="6" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv914.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="0" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv939.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="1" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv966.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="2" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv970.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="3" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv1025.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="4" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv1048.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="5" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv1123.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="3" Grid.Column="6" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/AchvMaynard.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="0" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/AchvHarp.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="1" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/AchvSNAV.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="2" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/AchvOmni.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="3" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/AchvConsole.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="4" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/AchvTesla.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="5" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/AchvPD.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="4" Grid.Column="6" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv1162.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="5" Grid.Column="2" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False" Margin="0,0,-36,0">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/Achv1499.jpg"/>
+                </Border.Background>
+            </Border>
+            <Border Grid.Row="5" Grid.Column="4" Width="32" Height="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" IsHitTestVisible="False" Margin="-36,0,0,0">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Assets/achievements/AchvKeter.jpg"/>
+                </Border.Background>
+            </Border>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        </Grid>
+    </Grid>
+</Window>

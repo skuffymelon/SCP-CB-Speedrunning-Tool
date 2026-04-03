@@ -1,0 +1,298 @@
+﻿<Window x:Class="SCP_Speedrun_Tool.SCPCBMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCP_Speedrun_Tool"
+        mc:Ignorable="d"
+        Title="SCP Containment Breach MENU" Height="450" Width="600" FontFamily="Courier New" ResizeMode="NoResize">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="0" CornerRadius="16,16,16,16" GlassFrameThickness="0,0,0,0" ResizeBorderThickness="5,5,5,5"></WindowChrome>
+    </WindowChrome.WindowChrome>
+
+    <Grid Background="Black">
+        <Image Panel.ZIndex="-10000" Source="/scpcbmenu.png" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Height="300"/>
+        <Image Panel.ZIndex="-10000" Source="/Logo2.png" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="300"/>
+        <Label MouseDown="MoveWindow" VerticalAlignment="Top" Height="37"/>
+        <TextBlock Text="SCP - CB MENU" FontSize="24" Panel.ZIndex="-10" Margin="5" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Button Template="{DynamicResource RoundedBut}" Click="CloseProgram" Cursor="Hand" Padding="0,1,0,0" BorderThickness="1" Foreground="White" Content="X" FontFamily="Courier New" Background="Transparent" Width="16" Height="16" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0"/>
+        <Button Template="{DynamicResource RoundedBut}" Click="Minimize" Cursor="Hand" Padding="0,1,0,0" BorderThickness="1" Foreground="White" Content="-" FontFamily="Courier New" Background="Transparent" Width="16" Height="16" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,35,0"/>
+
+        <TextBlock x:Name="scpcbactive" Text="SCP CB IS: ON/OFF" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,36,0,0"/>
+
+        <Grid x:Name="workspace">
+            <TextBlock x:Name="debug" Panel.ZIndex="-1000" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+            <Grid Height="130" Margin="5,58,5,5" Width="329" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Border Loaded="AddToCheatIndex" BorderBrush="White" Opacity="0.5" BorderThickness="1" CornerRadius="10"/>
+                <TextBlock Text="PLAYER INFO:" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
+
+                <StackPanel Margin="0,20,0,0">
+                    <TextBlock x:Name="x" Text="X:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,3,3,3"/>
+                    <TextBlock x:Name="y" Text="Y:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,3,3,3"/>
+                    <TextBlock x:Name="z" Text="Z:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,3,3,3"/>
+                    <TextBlock x:Name="bl" Text="BLOODLOSS: 0" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,3,3,3"/>
+                    <TextBlock x:Name="ij" Text="INJURIES: 0" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,3,3,3"/>
+                </StackPanel>
+                <Button Click="ClickButton" Cursor="Hand" Background="Transparent" Foreground="White" Template="{StaticResource RoundedBut}" Padding="2,2,2,0" Content="HEAL" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="15,20,5,15"/>
+                <Button Click="ClickButton" Cursor="Hand" Background="Transparent" Foreground="White" Template="{StaticResource RoundedBut}" Padding="2,2,2,0" Content="KILL" HorizontalAlignment="Right" VerticalAlignment="top" Margin="15,40,5,15"/>
+                <Button Click="ClickButton" Cursor="Hand" Background="Transparent" Foreground="White" Template="{StaticResource RoundedBut}" Padding="2,2,2,0" Content="REVIVE" HorizontalAlignment="Right" VerticalAlignment="top" Margin="15,60,5,15"/>
+            </Grid>
+
+            <Grid Height="130" Margin="5,58,5,5" Width="256" VerticalAlignment="Top" HorizontalAlignment="Right">
+                <Border Loaded="AddToCheatIndex" BorderBrush="White" Opacity="0.5" BorderThickness="1" CornerRadius="10"/>
+                <TextBlock Text="PLAYER CHEATS:" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
+
+                <TextBox KeyDown="EnterValue" TextAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Center" MaxLength="6" FontSize="20" Margin="0,0,25,59" Width="78" Height="25"/>
+                <TextBlock Margin="0,0,39,15" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="White" Text="FOG END"/>
+
+                <StackPanel HorizontalAlignment="Left" Height="106" VerticalAlignment="Bottom">
+                    <StackPanel Margin="6,2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Width="84" Height="16">
+                        <TextBlock Foreground="White" Margin="0,0,10,0" Text="GODMODE:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <CheckBox Click="ClickCheckBox" x:Name="gm" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Margin="6,2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Width="84" Height="16">
+                        <TextBlock Foreground="White" Margin="0,0,10,0" Text="NOCLIP:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <CheckBox Click="ClickCheckBox" x:Name="nc" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Margin="6,2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16">
+                        <TextBlock Foreground="White" Margin="0,0,10,0" Text="INF. STAMINA:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <CheckBox Click="ClickCheckBox" x:Name="infs" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Margin="6,2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16">
+                        <TextBlock Foreground="White" Margin="0,0,10,0" Text="NO TARGET:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <CheckBox Click="ClickCheckBox" x:Name="nt" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Margin="6,2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="16">
+                        <TextBlock Foreground="White" Margin="0,0,10,0" Text="SHOW MAP:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <CheckBox Click="ClickCheckBox" x:Name="sm" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="ONLY FOR THE SPEEDRUN MOD."/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Margin="161,69,0,0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Height="16">
+                    <TextBlock Foreground="White" Margin="0,0,10,0" Text="OMNI:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <CheckBox Click="ClickCheckBox" x:Name="om" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+
+            </Grid>
+            
+            <Grid x:Name="achivemenets" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="256" Height="237" Margin="5">
+                <Button Click="OverlayShow" x:Name="overlaybut" Cursor="Hand" Template="{DynamicResource RoundedBut}" Background="Transparent" Content="OVERLAY" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10"/>
+                <Button Click="OverlayShow" x:Name="codeoverlaybut" Cursor="Hand" Template="{DynamicResource RoundedBut}" Background="Transparent" Content="CODE OVE." Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10"/>
+                <Border Loaded="AddToCheatIndex" BorderBrush="White" Opacity="0.5" BorderThickness="1" CornerRadius="10"/>
+                <TextBlock Text="ACHIEVEMENT TRACKER:" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
+
+                <Grid x:Name="achvindex" Width="252" Height="216" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,2">
+                    <Border Grid.Row="0" Grid.Column="0" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="0" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv008.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="1" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="1" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv012.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="2" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="2" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv035.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="3" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="3" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv049.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="4" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="4" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv055.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="5" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="5" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv079.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="6" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="6" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv096.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="0" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="7" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv106.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="1" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="8" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv148.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="2" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="9" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv205.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="3" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="10" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv294.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="4" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="11" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv372.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="5" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="12" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv420.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="6" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="13" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv427.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="0" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="14" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv500.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="1" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="15" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv513.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="2" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="16" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv714.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="3" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="17" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv789.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="4" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="18" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv860.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="5" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="19" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv895.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="6" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="20" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv914.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="0" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="21" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv939.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="1" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="22" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv966.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="2" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="23" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv970.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="3" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="24" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv1025.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="4" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="25" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv1048.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="5" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="26" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv1123.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="3" Grid.Column="6" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="27" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/AchvMaynard.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="0" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="28" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/AchvHarp.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="1" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="29" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/AchvSNAV.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="2" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="30" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/AchvOmni.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="3" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="31" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/AchvConsole.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="4" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="32" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/AchvTesla.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="5" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="33" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/AchvPD.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="4" Grid.Column="6" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="34" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv1162.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="5" Grid.Column="2" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="35" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" Margin="0,0,-36,0">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/Achv1499.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Border Grid.Row="5" Grid.Column="4" Width="32" Height="32" PreviewMouseRightButtonDown="GiveAchv" Cursor="Hand" Uid="36" CornerRadius="2" BorderBrush="#ffffff" BorderThickness="1" Margin="-36,0,0,0">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/Assets/achievements/AchvKeter.jpg"/>
+                        </Border.Background>
+                    </Border>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </Grid>
+
+            <Grid Visibility="Hidden" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="329" Height="237" Margin="5">
+                <Border Loaded="AddToCheatIndex" BorderBrush="White" Opacity="0.5" BorderThickness="1" CornerRadius="10"/>
+                <TextBlock Text="GAME INFO &amp; CHEATS:" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

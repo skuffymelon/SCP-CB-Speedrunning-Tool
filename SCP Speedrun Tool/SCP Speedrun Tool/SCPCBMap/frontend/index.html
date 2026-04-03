@@ -1,0 +1,109 @@
+<!doctype html>
+<HTML>
+<HEAD>
+    <TITLE>SCP: Containment Breach map</TITLE>
+    <meta charset='utf-8'/>
+    <meta http-equiv='Content-Type' content='text/html'/>
+    <meta name='author' content='Sooslick'/>
+    <meta name='description' content='SCP: Containment Breach v1.3.11 map. Preview SCP:CB seeds on single online webpage without launching the game!'/>
+    <meta name='theme-color' content='gray'/>
+    <link rel="stylesheet" href="cb.css">
+</HEAD>
+<BODY>
+<div id="wrapper">
+    <div id="header" data-nosnippet>
+        <div id="inputs" class="map-component">
+            <div class="input-line" id="prompt-container">
+                <span><input id="prompt" autocomplete="off" oninput="updatePrompt()"/></span>
+                <span id="prompt-label">Vanilla game seed</span>
+            </div>
+            <div class="input-hint" id="prompt-hint">Up to 15 ASCII characters</div>
+            <div class="input-line" id="seed-container">
+                <span><input id="seed" autocomplete="off" oninput="updateSeed()"/></span>
+                <span id="seed-label">Speedrun Mod seed</span>
+            </div>
+            <div class="input-hint" id="seed-hint">Number in range 1, 2147483647</div>
+            <div class="input-hint" id="blank-hint">Leave fields blank for random seed</div>
+            <button id="generate" onclick="createMap()">CREATE MAP</button>
+            <img id="loading-gif" src="load.gif" hidden/>
+        </div>
+        <div id="page-meta" class="map-component">
+            <div class="page-meta-line">SCP: Containment Breach v1.3.11 map</div>
+            <div class="page-meta-line">App version: v1.4.1 // 250518</div>
+            <div class="page-meta-line">Created by <a id="sooslick-link" href="https://sooslick.art/">@Sooslick</a> for speedrunning community</div>
+            <br/>
+            <div class="page-meta-line">Download game: <a id="scpcbgame-link" href="https://www.scpcbgame.com/">Official website</a></div>
+            <div class="page-meta-line">Download Speedrun Mod: <a id="mod-link" href="https://github.com/forxandknives/SCPCB-Speedrun-Mod/releases">Github link</a></div>
+        </div>
+    </div>
+    <div id="map-block">
+        <div class="map-column">
+            <div id="map" class="map-component" hidden>
+                <table id="map-table"></table>
+            </div>
+            <button onclick="shareMap()" id="map-share" hidden>COPY LINK</button>
+            <div id="copied-text" class="input-hint" hidden>Copied to clipboard</div>
+            <div id="error-text" class="input-hint" hidden>Service seems to be unavailable. DM @Sooslick in Discord
+            </div>
+        </div>
+        <div class="map-column">
+            <div id="map-info" class="map-component" hidden>
+                <div class="meta-head">Map metadata</div>
+                <div class="info-line" id="seedString-container">
+                    <span id="seedString-label">Seed string:</span>
+                    <span id="seedString"></span>
+                </div>
+                <div class="info-line" id="seedValue-container">
+                    <span id="seedValue-label">Seed number:</span>
+                    <span id="seedValue"></span>
+                </div>
+                <div class="info-line" id="loadingScreen-container">
+                    <span id="loadingScreen-label">Loading screen:</span>
+                    <span id="loadingScreen"></span>
+                </div>
+                <div class="info-line" id="state106-container">
+                    <span id="state106-label">SCP-106 timer:</span>
+                    <span id="state106"></span>
+                    <span class="hidden-hint" id="state106-hint"><span class="hidden-hint-text">Time until the first appearance of SCP-106 in minutes</span></span>
+                </div>
+                <div class="info-line" id="statePlayer-container">
+                    <span id="statePlayer-label">Initial angle:</span>
+                    <span id="statePlayer"></span>
+                    <span class="hidden-hint" id="statePlayer-hint"><span class="hidden-hint-text">Player's initial rotation is random and selected between 160 and 200 degrees</span></span>
+                </div>
+            </div>
+            <div id="room-info" class="map-component" hidden>
+                <div class="meta-head">Room info</div>
+                <div class="info-line" id="room-container">
+                    <span id="room-label">Room:</span>
+                    <span id="room"></span>
+                </div>
+                <div class="info-line" id="room-event-container">
+                    <span id="room-event-label">Events:</span>
+                    <span id="room-event"></span>
+                </div>
+                <div class="info-line" id="rnd-info-container">
+                    <span id="rnd-info-label">Extra info:</span>
+                    <span id="rnd-info"></span>
+                </div>
+            </div>
+            <div id="map-pd" class="map-component">
+                <div class="meta-head">Tunnels</div>
+                <table id="table-pd"></table>
+            </div>
+            <div id="map-forest" class="map-component">
+                <div class="meta-head">Forest</div>
+                <div id="map-forest-wrap">
+                    <hr/>
+                    <table id="table-forest"></table>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="svg.js"></script>
+<script src="ui.js"></script>
+<script src="form.js"></script>
+</BODY>
+</HTML>

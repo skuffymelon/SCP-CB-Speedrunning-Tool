@@ -1,0 +1,684 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <RootNamespace>SCP_Speedrun_Tool</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>True</UseWPF>
+    <PackageIcon>scpticon1.png</PackageIcon>
+    <AssemblyVersion>0.0.2</AssemblyVersion>
+    <FileVersion>0.0.2</FileVersion>
+    <ApplicationIcon>SCPIco.ico</ApplicationIcon>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="173back.jpg" />
+    <None Remove="AssemblyInfo.cs~RFac0c4f81.TMP" />
+    <None Remove="Assets\achievements\Achv008.jpg" />
+    <None Remove="Assets\achievements\Achv012.jpg" />
+    <None Remove="Assets\achievements\Achv035.jpg" />
+    <None Remove="Assets\achievements\Achv049.jpg" />
+    <None Remove="Assets\achievements\Achv055.jpg" />
+    <None Remove="Assets\achievements\Achv079.jpg" />
+    <None Remove="Assets\achievements\Achv096.jpg" />
+    <None Remove="Assets\achievements\Achv1025.jpg" />
+    <None Remove="Assets\achievements\Achv1048.jpg" />
+    <None Remove="Assets\achievements\Achv106.jpg" />
+    <None Remove="Assets\achievements\Achv1123.jpg" />
+    <None Remove="Assets\achievements\Achv1162.jpg" />
+    <None Remove="Assets\achievements\Achv148.jpg" />
+    <None Remove="Assets\achievements\Achv1499.jpg" />
+    <None Remove="Assets\achievements\Achv205.jpg" />
+    <None Remove="Assets\achievements\Achv294.jpg" />
+    <None Remove="Assets\achievements\Achv372.jpg" />
+    <None Remove="Assets\achievements\Achv420.jpg" />
+    <None Remove="Assets\achievements\Achv427.jpg" />
+    <None Remove="Assets\achievements\Achv500.jpg" />
+    <None Remove="Assets\achievements\Achv513.jpg" />
+    <None Remove="Assets\achievements\Achv714.jpg" />
+    <None Remove="Assets\achievements\Achv789.jpg" />
+    <None Remove="Assets\achievements\Achv860.jpg" />
+    <None Remove="Assets\achievements\Achv895.jpg" />
+    <None Remove="Assets\achievements\Achv914.jpg" />
+    <None Remove="Assets\achievements\Achv939.jpg" />
+    <None Remove="Assets\achievements\Achv966.jpg" />
+    <None Remove="Assets\achievements\Achv970.jpg" />
+    <None Remove="Assets\achievements\AchvConsole.jpg" />
+    <None Remove="Assets\achievements\AchvHarp.jpg" />
+    <None Remove="Assets\achievements\AchvKeter.jpg" />
+    <None Remove="Assets\achievements\AchvMaynard.jpg" />
+    <None Remove="Assets\achievements\AchvOmni.jpg" />
+    <None Remove="Assets\achievements\AchvPD.jpg" />
+    <None Remove="Assets\achievements\AchvSNAV.jpg" />
+    <None Remove="Assets\achievements\AchvTesla.jpg" />
+    <None Remove="buhback.png" />
+    <None Remove="disc.png" />
+    <None Remove="SCPCBMap\frontend\cb.css" />
+    <None Remove="SCPCBMap\frontend\form.js" />
+    <None Remove="SCPCBMap\frontend\index.html" />
+    <None Remove="SCPCBMap\frontend\load.gif" />
+    <None Remove="SCPCBMap\frontend\map.html" />
+    <None Remove="SCPCBMap\frontend\svg.js" />
+    <None Remove="SCPCBMap\frontend\ui.js" />
+    <None Remove="github.png" />
+    <None Remove="help.png" />
+    <None Remove="Info2.png" />
+    <None Remove="Logo2.png" />
+    <None Remove="menublack.jpg" />
+    <None Remove="menuwhite.jpg" />
+    <None Remove="roomd\1.png" />
+    <None Remove="roomd\12d.png" />
+    <None Remove="roomd\1t.png" />
+    <None Remove="roomd\1tf.png" />
+    <None Remove="roomd\2.png" />
+    <None Remove="roomd\2d.png" />
+    <None Remove="roomd\3block.png" />
+    <None Remove="roomd\arch.png" />
+    <None Remove="roomd\b2d.png" />
+    <None Remove="roomd\block.png" />
+    <None Remove="roomd\chirmas.png" />
+    <None Remove="roomd\closet.png" />
+    <None Remove="roomd\dho.png" />
+    <None Remove="roomd\dhoa.png" />
+    <None Remove="roomd\dvo.png" />
+    <None Remove="roomd\dvoa.png" />
+    <None Remove="roomd\pit.png" />
+    <None Remove="roomd\room2.png" />
+    <None Remove="roomd\sink.png" />
+    <None Remove="roomd\zap.png" />
+    <None Remove="scp logo.jpg" />
+    <None Remove="scpcbmap.jar" />
+    <None Remove="scpcbmapServer.jar" />
+    <None Remove="scpcbmenu.png" />
+    <None Remove="SCPCREDITS.png" />
+    <None Remove="scpctrans.png" />
+    <None Remove="scpctransf.png" />
+    <None Remove="scpticon.png" />
+    <None Remove="SEEDS.csv" />
+    <None Remove="serial.json" />
+    <None Remove="server.properties" />
+    <None Remove="settings.png" />
+    <None Remove="soos.png" />
+    <None Remove="speedrun.png" />
+    <None Remove="TEST4.png" />
+    <None Remove="twit.png" />
+    <None Remove="yt.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\achievements\Achv008.jpg" />
+    <Resource Include="Assets\achievements\Achv012.jpg" />
+    <Resource Include="Assets\achievements\Achv035.jpg" />
+    <Resource Include="Assets\achievements\Achv049.jpg" />
+    <Resource Include="Assets\achievements\Achv055.jpg" />
+    <Resource Include="Assets\achievements\Achv079.jpg" />
+    <Resource Include="Assets\achievements\Achv096.jpg" />
+    <Resource Include="Assets\achievements\Achv1025.jpg" />
+    <Resource Include="Assets\achievements\Achv1048.jpg" />
+    <Resource Include="Assets\achievements\Achv106.jpg" />
+    <Resource Include="Assets\achievements\Achv1123.jpg" />
+    <Resource Include="Assets\achievements\Achv1162.jpg" />
+    <Resource Include="Assets\achievements\Achv148.jpg" />
+    <Resource Include="Assets\achievements\Achv1499.jpg" />
+    <Resource Include="Assets\achievements\Achv205.jpg" />
+    <Resource Include="Assets\achievements\Achv294.jpg" />
+    <Resource Include="Assets\achievements\Achv372.jpg" />
+    <Resource Include="Assets\achievements\Achv420.jpg" />
+    <Resource Include="Assets\achievements\Achv427.jpg" />
+    <Resource Include="Assets\achievements\Achv500.jpg" />
+    <Resource Include="Assets\achievements\Achv513.jpg" />
+    <Resource Include="Assets\achievements\Achv714.jpg" />
+    <Resource Include="Assets\achievements\Achv789.jpg" />
+    <Resource Include="Assets\achievements\Achv860.jpg" />
+    <Resource Include="Assets\achievements\Achv895.jpg" />
+    <Resource Include="Assets\achievements\Achv914.jpg" />
+    <Resource Include="Assets\achievements\Achv939.jpg" />
+    <Resource Include="Assets\achievements\Achv966.jpg" />
+    <Resource Include="Assets\achievements\Achv970.jpg" />
+    <Resource Include="Assets\achievements\AchvConsole.jpg" />
+    <Resource Include="Assets\achievements\AchvHarp.jpg" />
+    <Resource Include="Assets\achievements\AchvKeter.jpg" />
+    <Resource Include="Assets\achievements\AchvMaynard.jpg" />
+    <Resource Include="Assets\achievements\AchvOmni.jpg" />
+    <Resource Include="Assets\achievements\AchvPD.jpg" />
+    <Resource Include="Assets\achievements\AchvSNAV.jpg" />
+    <Resource Include="Assets\achievements\AchvTesla.jpg" />
+    <Resource Include="buhback.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="disc.png" />
+    <Resource Include="github.png" />
+    <Resource Include="help.png" />
+    <Content Include="Assets\DS-DIGI.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\frontend\cb.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\frontend\form.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\frontend\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\frontend\load.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\frontend\map.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\frontend\svg.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\frontend\ui.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\12d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\1t.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\1tf.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\2d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\3block.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\arch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\b2d.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\block.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\closet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\dho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\dhoa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\dvo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\dvoa.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\pit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\room1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\room2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\room2c.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\room3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\room4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\sink.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="roomd\zap.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\scpcbmap.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\scpcbmapServer.jar">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPIco.ico" />
+    <Content Include="Assets\serial.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\chirmas.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SCPCBMap\server.properties">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="scpcbmenu.png" />
+    <Resource Include="scpticon.png" />
+    <Resource Include="scpticon1.png" />
+    <Resource Include="settings.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="soos.png" />
+    <Resource Include="speedrun.png" />
+    <Resource Include="TEST4.png" />
+    <Resource Include="twit.png" />
+    <Resource Include="yt.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="173back.jpg" />
+    <Resource Include="Info2.png" />
+    <Resource Include="Logo2.png" />
+    <Resource Include="menublack.jpg" />
+    <Resource Include="menuwhite.jpg" />
+    <Resource Include="scp logo.jpg" />
+    <Content Include="Assets\SEEDS.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <PackageReference Include="Memory-x86" Version="2025.1126.1521.42" />
+    <Reference Include="VAMemory">
+      <HintPath>..\VAMemory.dll</HintPath>
+    </Reference>
+    <Resource Include="SCPCREDITS.png" />
+    <Resource Include="scpctrans.png" />
+    <Resource Include="scpctransf.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\forest1h.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\forest2Ch.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\forest2h.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\forest3h.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\forest4h.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\008_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\1123_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\1499object0_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\173.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\173bright.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\173bright_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\173_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\4tunnels.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\4tunnels_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\checkpoint1_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\checkpoint2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\coffin_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\dimension1499_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\endroom2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\endroom_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\exit1_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\gateaentrance_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\gatea_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\lockroom2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\lockroom3_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\lockroom_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\machineroom_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\medibay_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\mt1.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\mt2.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\mt2c.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\mt3.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\mt4.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\mt_elevator.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\mt_generator.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\pocketdimension1_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room012_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room035_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room049_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room079_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room106_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room1162_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room1archive.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room1archive_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room1lifts_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room205.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room205_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2c2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2cafeteria_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2ccont_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2closets_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2cpit_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2Ctunnel_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2Cz3_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2C_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2doors_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2elevator_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2gw_b_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2gw_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2nuke_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2offices2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2offices3_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2offices4_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2offices_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2pipes2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2pipes_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2pit_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2poffices2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2poffices_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2scps2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2scps_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2servers2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2servers_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2shaft_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2sl_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2sroom_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2storage_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2tesla_hcz_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2tesla_lcz_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2tesla_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2test1074.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2test1074_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2testroom2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2toilets_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2tunnel_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2z3_2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2z3_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2_2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2_3_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2_4_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2_5_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3gw_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3offices_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3pit_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3servers2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3servers_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3storage_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3tunnel_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3z2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3z3_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3_2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3_3_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room3_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room4info_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room4pit_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room4z3_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room4_2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room4_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room513_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room860_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room966.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\room966_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\roompj_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\testroom_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\tunnel2_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rmesh\tunnel_opt.rmesh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\roomdb.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\scpcbFiles\rooms.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\start.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="SCPCBMap\stop.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="scpticon1.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="Assets\settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
