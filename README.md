@@ -35,7 +35,7 @@ The link to Sooslick's software is listed down below.
 
 # CHANGELOG
 ### 4/3/2026
-## (0.3a)
+## (0.3a) - THE BRIDGE UPDATE
 - Added bridge between the tool and SCP Containment Breach (Speedrun Mod)
 - Achievement Tracking Overlay
 - Maynard <-> Maintenence Code Converter Overlay
